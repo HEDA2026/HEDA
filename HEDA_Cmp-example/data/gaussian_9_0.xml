@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<adag xmlns="http://pegasus.isi.edu/schema/DAX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/DAX http://pegasus.isi.edu/schema/dax-2.1.xsd" version="2.1" count="1" index="0" name="workflow" jobCount="9" fileCount="0" childCount="11">
+  <job id="ID00000" name="task0" runtime="0.9872"/>
+  <job id="ID00001" name="task1" runtime="7.6343"/>
+  <job id="ID00002" name="task2" runtime="7.3642"/>
+  <job id="ID00003" name="task3" runtime="1.5727"/>
+  <job id="ID00004" name="task4" runtime="4.6001"/>
+  <job id="ID00005" name="task5" runtime="4.7126"/>
+  <job id="ID00006" name="task6" runtime="5.7446"/>
+  <job id="ID00007" name="task7" runtime="7.6921"/>
+  <job id="ID00008" name="task8" runtime="0.0"/>
+  <child ref="ID00001">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00002">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00003">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00004">
+    <parent ref="ID00001"/>
+  </child>
+  <child ref="ID00005">
+    <parent ref="ID00002"/>
+    <parent ref="ID00004"/>
+  </child>
+  <child ref="ID00006">
+    <parent ref="ID00003"/>
+    <parent ref="ID00004"/>
+  </child>
+  <child ref="ID00007">
+    <parent ref="ID00005"/>
+  </child>
+  <child ref="ID00008">
+    <parent ref="ID00006"/>
+    <parent ref="ID00007"/>
+  </child>
+</adag>

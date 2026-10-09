@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<adag xmlns="http://pegasus.isi.edu/schema/DAX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/DAX http://pegasus.isi.edu/schema/dax-2.1.xsd" version="2.1" count="1" index="0" name="converted_dag" jobCount="9" fileCount="0" childCount="8">
+  <job id="ID00000" namespace="Converted" name="ComputeTask_0" version="1.0" runtime="0.9872">
+    <uses file="data_0_1.dat" link="output" register="true" transfer="true" optional="false" type="data" size="416"/>
+    <uses file="data_0_2.dat" link="output" register="true" transfer="true" optional="false" type="data" size="378"/>
+    <uses file="data_0_3.dat" link="output" register="true" transfer="true" optional="false" type="data" size="448"/>
+  </job>
+  <job id="ID00001" namespace="Converted" name="ComputeTask_1" version="1.0" runtime="7.6343">
+    <uses file="data_0_1.dat" link="input" register="false" transfer="false" optional="false" type="data" size="416"/>
+    <uses file="data_1_4.dat" link="output" register="true" transfer="true" optional="false" type="data" size="323"/>
+  </job>
+  <job id="ID00002" namespace="Converted" name="ComputeTask_2" version="1.0" runtime="7.3642">
+    <uses file="data_0_2.dat" link="input" register="false" transfer="false" optional="false" type="data" size="378"/>
+    <uses file="data_2_5.dat" link="output" register="true" transfer="true" optional="false" type="data" size="496"/>
+  </job>
+  <job id="ID00003" namespace="Converted" name="ComputeTask_3" version="1.0" runtime="1.5727">
+    <uses file="data_0_3.dat" link="input" register="false" transfer="false" optional="false" type="data" size="448"/>
+    <uses file="data_3_6.dat" link="output" register="true" transfer="true" optional="false" type="data" size="469"/>
+  </job>
+  <job id="ID00004" namespace="Converted" name="ComputeTask_4" version="1.0" runtime="4.6001">
+    <uses file="data_1_4.dat" link="input" register="false" transfer="false" optional="false" type="data" size="323"/>
+    <uses file="data_4_5.dat" link="output" register="true" transfer="true" optional="false" type="data" size="422"/>
+    <uses file="data_4_6.dat" link="output" register="true" transfer="true" optional="false" type="data" size="492"/>
+  </job>
+  <job id="ID00005" namespace="Converted" name="ComputeTask_5" version="1.0" runtime="4.7126">
+    <uses file="data_2_5.dat" link="input" register="false" transfer="false" optional="false" type="data" size="496"/>
+    <uses file="data_4_5.dat" link="input" register="false" transfer="false" optional="false" type="data" size="422"/>
+    <uses file="data_5_7.dat" link="output" register="true" transfer="true" optional="false" type="data" size="312"/>
+  </job>
+  <job id="ID00006" namespace="Converted" name="ComputeTask_6" version="1.0" runtime="5.7446">
+    <uses file="data_3_6.dat" link="input" register="false" transfer="false" optional="false" type="data" size="469"/>
+    <uses file="data_4_6.dat" link="input" register="false" transfer="false" optional="false" type="data" size="492"/>
+    <uses file="data_6_8.dat" link="output" register="true" transfer="true" optional="false" type="data" size="382"/>
+  </job>
+  <job id="ID00007" namespace="Converted" name="ComputeTask_7" version="1.0" runtime="7.6921">
+    <uses file="data_5_7.dat" link="input" register="false" transfer="false" optional="false" type="data" size="312"/>
+    <uses file="data_7_8.dat" link="output" register="true" transfer="true" optional="false" type="data" size="307"/>
+  </job>
+  <job id="ID00008" namespace="Converted" name="ComputeTask_8" version="1.0" runtime="0">
+    <uses file="data_6_8.dat" link="input" register="false" transfer="false" optional="false" type="data" size="382"/>
+    <uses file="data_7_8.dat" link="input" register="false" transfer="false" optional="false" type="data" size="307"/>
+  </job>
+  <child ref="ID00001">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00002">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00003">
+    <parent ref="ID00000"/>
+  </child>
+  <child ref="ID00004">
+    <parent ref="ID00001"/>
+  </child>
+  <child ref="ID00005">
+    <parent ref="ID00002"/>
+    <parent ref="ID00004"/>
+  </child>
+  <child ref="ID00006">
+    <parent ref="ID00003"/>
+    <parent ref="ID00004"/>
+  </child>
+  <child ref="ID00007">
+    <parent ref="ID00005"/>
+  </child>
+  <child ref="ID00008">
+    <parent ref="ID00006"/>
+    <parent ref="ID00007"/>
+  </child>
+</adag>
